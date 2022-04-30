@@ -8,7 +8,7 @@ const cardRender = (arr) => {
       <div class="card-body">
       <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.house}</p>
-        <button class="btn btn-primary">Delete</button>
+        <button class="btn btn-danger">Expel</button>
       </div>
     </div>
   `  
