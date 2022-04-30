@@ -1,1 +1,1 @@
-console.log("Success")
+import { sortingHataData } from "../data/sortingHatData.js"; 
