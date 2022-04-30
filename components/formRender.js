@@ -4,8 +4,8 @@ const formRender = () => {
   let domString = 
   `<form>
     <div class="form-floating">
-      <label for="floatingTextarea">Enter Your Name Here</label>
-      <textarea class="form-control" placeholder="Enter Your Name Here" id="floatingTextarea" required></textarea>
+      <label for="fnameInputTextArea">Enter Your Name Here</label>
+      <textarea class="form-control" placeholder="Enter Your Name Here" id="nameInputTextArea" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>`

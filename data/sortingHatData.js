@@ -17,7 +17,21 @@ export const sortingHataData = [
     id: 3, 
     name: "Tom Riddle", 
     house: "Slytherin", 
-    isExpelled: false, 
+    isExpelled: true, 
     imageURL: ""
   },
+  {
+    id: 4, 
+    name: "Luna Lovegood", 
+    house: "Ravenclaw", 
+    isExpelled: false, 
+    imageURL: ""
+  }, 
+  {
+    id: 5, 
+    name: "Newton Scamander", 
+    house: "Hufflepuff", 
+    isExpelled: false, 
+    imageURL: ""
+  }
 ]; 
