@@ -1,4 +1,4 @@
-export const sortingHataData = [
+const sortingHataData = [
   {
     id: 1, 
     name: "Harry Potter", 
@@ -35,3 +35,10 @@ export const sortingHataData = [
     imageURL: ""
   }
 ]; 
+
+
+const deathEaterData = [
+  
+]
+
+export {sortingHataData, deathEaterData}
