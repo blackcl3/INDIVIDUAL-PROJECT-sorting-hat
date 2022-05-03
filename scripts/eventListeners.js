@@ -1,6 +1,7 @@
 import cardRender from "../components/cardRender.js";
 import formRender from "../components/formRender.js";
-import { sortingHataData } from "../data/reference.js"
+import { deathEaterData, sortingHataData } from "../data/reference.js"
+import randomFunction from "./randomFunction.js";
 
 const eventListeners = () => {
   const addName = document.querySelector("#nameInputForm");
@@ -11,12 +12,10 @@ const eventListeners = () => {
       const value = e.target[0].value; 
       console.log(e)
       console.log(value)
-      //return value or run function to create new object
-      // needs to run randomizer function here
       const newStudent = {
         id: sortingHataData[sortingHataData.length-1].id+1, 
         name: value, 
-        house: "Hufflepuff", 
+        house: randomFunction(), 
         isExpelled: false, 
         imageURL: ""
       }
@@ -29,24 +28,40 @@ const eventListeners = () => {
   buttonEventListener.addEventListener("click", (e) => { 
     if(e.target.id === "gryffindor--btn") { 
       const newArr = sortingHataData.filter(house => house.house.toLowerCase() === "gryffindor")
-      cardRender(newArr)
+      cardRender(newArr, "#card-container")
     } else if (e.target.id === "slytherin--btn"){
       const newArr = sortingHataData.filter(house => house.house.toLowerCase() === "slytherin")
-      cardRender(newArr)
+      cardRender(newArr, "#card-container")
     } else if (e.target.id === "ravenclaw--btn") {
       const newArr = sortingHataData.filter(house => house.house.toLowerCase() === "ravenclaw")
-      cardRender(newArr)
+      cardRender(newArr, "#card-container")
     } else if (e.target.id === "hufflepuff--btn") {
       const newArr = sortingHataData.filter(house => house.house.toLowerCase() === "hufflepuff")
-      cardRender(newArr)
+      cardRender(newArr, "#card-container")
     } else if (e.target.id === "death-eaters--btn") {
-      console.log("clicked death eaters button")
+      const newArr = []
+      cardRender(newArr, "#card-container")
+      cardRender(deathEaterData, "#death-eaters-card-container")
     } else if (e.target.id === "clear--btn") {
-      cardRender(sortingHataData)
+      cardRender(sortingHataData, "#card-container")
+      cardRender(deathEaterData, "#death-eaters-card-container")
     }
   })
+  const cardExpelListener = document.querySelector("#card-container"); 
+  cardExpelListener.addEventListener("click", (e) => {
+    if(e.target.id.includes("delete")) {
+      console.log("clicked delete button")
+      const [method, id] = e.target.id.split("--"); 
+      const index = sortingHataData.findIndex((obj) => obj.id === Number(id))
+      const expelledStudent = sortingHataData.splice(index, 1)
+      cardRender(sortingHataData, "#card-container")
+      deathEaterData.push(...expelledStudent)
+      cardRender(deathEaterData, "#death-eaters-card-container")
+    }
+  })
+
 }
-  // const cardExpelListener = document.querySelector()
+
 
 
 export default eventListeners; 
