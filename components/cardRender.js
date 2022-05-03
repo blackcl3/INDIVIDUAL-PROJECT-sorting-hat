@@ -1,6 +1,6 @@
 import { renderToDom } from "../utils/renderToDom.js";
 
-const cardRender = (arr) => {
+const cardRender = (arr, divId) => {
   let domString = "";
   for (const item of arr) {
     domString += `
@@ -13,7 +13,7 @@ const cardRender = (arr) => {
     </div>
   `  
   }
-  renderToDom("#card-container", domString)
+  renderToDom(divId, domString)
 }; 
 
 export default cardRender; 

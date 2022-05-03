@@ -7,7 +7,7 @@ import eventListeners from "./eventListeners.js";
 const startApp = () => {
   formRender()
   buttonRow()
-  cardRender(sortingHataData)
+  cardRender(sortingHataData, "#card-container")
   eventListeners()
 }
 
