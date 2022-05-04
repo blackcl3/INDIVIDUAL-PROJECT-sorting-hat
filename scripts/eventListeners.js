@@ -2,6 +2,7 @@ import cardRender from "../components/cardRender.js";
 import formRender from "../components/formRender.js";
 import { deathEaterData, sortingHataData } from "../data/reference.js"
 import randomFunction from "./randomFunction.js";
+import { visibilityFunction } from "./visibilityFunction.js";
 
 const eventListeners = () => {
   const addName = document.querySelector("#nameInputForm");
@@ -20,7 +21,9 @@ const eventListeners = () => {
         imageURL: ""
       }
       sortingHataData.push(newStudent)
-      cardRender(sortingHataData)
+      cardRender(sortingHataData, "#card-container")
+      visibilityFunction("#card-container")
+      visibilityFunction("filter-btn-container")
       addName.reset()
     }
   })
@@ -50,10 +53,10 @@ const eventListeners = () => {
   const cardExpelListener = document.querySelector("#card-container"); 
   cardExpelListener.addEventListener("click", (e) => {
     if(e.target.id.includes("delete")) {
-      console.log("clicked delete button")
       const [method, id] = e.target.id.split("--"); 
       const index = sortingHataData.findIndex((obj) => obj.id === Number(id))
       const expelledStudent = sortingHataData.splice(index, 1)
+      console.log(expelledStudent)
       cardRender(sortingHataData, "#card-container")
       deathEaterData.push(...expelledStudent)
       cardRender(deathEaterData, "#death-eaters-card-container")
