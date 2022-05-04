@@ -1,8 +1,7 @@
 import cardRender from "../components/cardRender.js";
-import formRender from "../components/formRender.js";
 import { deathEaterData, sortingHataData } from "../data/reference.js"
 import randomFunction from "./randomFunction.js";
-import { visibilityFunction } from "./visibilityFunction.js";
+import buttonRow from "../components/buttonRender.js";
 
 const eventListeners = () => {
   const addName = document.querySelector("#nameInputForm");
@@ -22,8 +21,7 @@ const eventListeners = () => {
       }
       sortingHataData.push(newStudent)
       cardRender(sortingHataData, "#card-container")
-      visibilityFunction("#card-container")
-      visibilityFunction("filter-btn-container")
+      buttonRow()
       addName.reset()
     }
   })

@@ -11,10 +11,10 @@ const openPage = () => {
 
 const startApp = () => {
   formRender()
-  buttonRow()
-  cardRender(sortingHataData, "#card-container")
-  visibilityFunction("#card-container")
-  visibilityFunction("#filter-btn-container")
+  // buttonRow()
+  // cardRender(sortingHataData, "#card-container")
+  // visibilityFunction("#card-container")
+  // visibilityFunction("#filter-btn-container")
   eventListeners()
 }
 
