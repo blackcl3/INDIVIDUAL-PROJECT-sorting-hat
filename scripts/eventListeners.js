@@ -5,7 +5,7 @@ import buttonRow from "../components/buttonRender.js";
 import { changePageCSSFunction } from "./changePageCSSFunction.js";
 
 const eventListeners = () => {
-
+  const addNameForm = document.querySelector("#name-form-container")
   const addName = document.querySelector("#nameInputForm");
   addName.addEventListener("submit", (e) => {
     if(e) {
@@ -21,9 +21,10 @@ const eventListeners = () => {
       sortingHataData.push(newStudent)
       cardRender(sortingHataData, "#card-container")
       alert(`You're a wizard, ${newStudent.name}.`)
-      changePageCSSFunction()
       buttonRow()
       addName.reset()
+      addNameForm.style.display = "none";
+      changePageCSSFunction()
     }
   })
 
