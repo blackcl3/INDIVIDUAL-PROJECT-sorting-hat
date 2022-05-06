@@ -5,9 +5,9 @@ body {
 }
 
 .main-title {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Cormorant Upright', serif;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 65px 0;
   justify-content: center;
   text-align: center;
 }
@@ -18,16 +18,32 @@ body {
 
 h1 {
   font-size: 3.5rem;
+  font-weight: 700;
 }
 
-h3 {
-  margin: 10px 0;
+.main-title h1 {
+  font-weight: 700;
+  padding: 20px; 
+}
+
+.main-title h3 {
+  margin: 30px 0 20px 0;
+}
+
+.main-title img {
+  margin: 10px 0 0 0; 
+}
+
+textarea.form-control {
+    height: 3rem;
+    font-size: 20px;
 }
 
 .card-container-div {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  background-color: #c7dff4;
 }
 
 p {
@@ -37,6 +53,7 @@ p {
 .btn-container {
   justify-content: center;
   text-align: center;
+  margin: 20px 0; 
 }
 
 .btn.btn-danger {
@@ -51,11 +68,21 @@ p {
   width: 45%; 
   text-align: center;
   margin-right: 30px;
+  align-self: flex-start;
 }
 
 #death-eaters-card-container {
   width: 45%;
   text-align: center;
+  align-self: flex-start;
+}
+
+.enrolled-student-heading {
+  text-align: left;
+}
+
+.death-eater-heading {
+  text-align: left;
 }
 
 .card {
@@ -65,9 +92,8 @@ p {
 }
 
 #death-eaters-card-container .card {
-  background-color: black;
+  background-color: #373737;
   color: antiquewhite;
-  margin: 26px 0 10px 10px; 
   font-family: 'Cormorant Upright', serif;
   
 }
@@ -107,6 +133,8 @@ p {
   border: 1px solid #373737;
   padding: 18px;
   margin: 12px; 
+  color: antiquewhite;
+  background-color: #373737;
 }
 
 .form-label{
