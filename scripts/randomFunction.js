@@ -1,6 +1,5 @@
 const randomFunction = () => {
   const randomValue = Math.random()
-  console.log(randomValue)
   if(randomValue < 0.25) {
     return "Hufflepuff"
   } else if (randomValue >= 0.25 && randomValue < 0.5) {

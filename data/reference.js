@@ -17,7 +17,7 @@ const sortingHataData = [
     id: 3, 
     name: "Tom Riddle", 
     house: "Slytherin", 
-    isExpelled: true, 
+    isExpelled: false, 
     imageURL: ""
   },
   {

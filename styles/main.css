@@ -1,3 +1,114 @@
 body {
   background-color: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+  color: #373737; 
+}
+
+.main-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  margin: 20px 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-title img {
+  height: 13rem; 
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+.card-container-div {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+p {
+  font-family: 'Poppins', sans-serif
+}
+
+.btn-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.btn.btn-danger {
+  font-family: 'Poppins', sans-serif
+}
+
+.btn{
+  font-family: 'Poppins', sans-serif
+}
+
+#card-container {
+  width: 45%; 
+  text-align: center;
+  margin-right: 30px;
+}
+
+#death-eaters-card-container {
+  width: 45%;
+  text-align: center;
+}
+
+.card {
+  margin: 26px 10px 10px 0; 
+  width: 18rem; 
+  text-align: center;
+}
+
+#death-eaters-card-container .card {
+  background-color: black;
+  color: antiquewhite;
+  margin: 26px 0 10px 10px; 
+  font-family: 'Cormorant Upright', serif;
+  
+}
+
+#death-eaters-card-container button {
+  visibility: hidden; 
+}
+
+#death-eaters-card-container p:first-of-type {
+  text-decoration: line-through;
+}
+
+
+
+.card--gryffindor {
+  background-color: gold; 
+}
+
+.card--slytherin {
+  background-color:#A5F762;
+}
+
+.card--ravenclaw {
+  background-color: #62a5f7;
+}
+
+.card--hufflepuff {
+  background-color: #F762A5;
+}
+
+
+.form-button {
+  margin: 10px 0;
+}
+
+.form-container {
+  border: 1px solid #373737;
+  padding: 18px;
+  margin: 12px; 
+}
+
+.form-label{
+  font-size: 1.5rem;
 }
