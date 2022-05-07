@@ -14,6 +14,7 @@ body {
 
 .main-title img {
   height: 13rem; 
+  margin: 24px 0; 
 }
 
 h1 {
@@ -28,10 +29,6 @@ h1 {
 
 .main-title h3 {
   margin: 30px 0 20px 0;
-}
-
-.main-title img {
-  margin: 10px 0 0 0; 
 }
 
 textarea.form-control {
@@ -53,7 +50,7 @@ p {
 .btn-container {
   justify-content: center;
   text-align: center;
-  margin: 20px 0; 
+  margin: 60px 0; 
 }
 
 .btn.btn-danger {
@@ -132,7 +129,7 @@ p {
 .form-container {
   border: 1px solid #373737;
   padding: 18px;
-  margin: 12px; 
+  margin: 40px; 
   color: antiquewhite;
   background-color: #373737;
 }
